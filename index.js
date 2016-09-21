@@ -47,13 +47,13 @@ app.post('/webhook/', function (req, res) {
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
-			if(text.includes("Hi")) {
+			if(text.includes("Hiiiiiii")) {
 				var action='order';
 				sendTextMessage(sender,'order', token)
 				sendTextMessageModified(sender,'track')
 
 			} else {
-				sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
+				sendTextMessage(sender, "HI There ", token)
 			}
 			console.log('action is... '+action);
 			continue
@@ -121,7 +121,7 @@ request({url:'https://nodejsapitest1.herokuapp.com/listCoupons/:', qs:properties
 
 // recommended to inject access tokens as environmental variables, e.g.
 // const token = process.env.PAGE_ACCESS_TOKEN
-const token ="628643280648104"
+const token ="EAAZAY8vArNgMBALEGEyqW1gAkp6JVjsZCRh6Y6E8LKThZAWYiZArvrcX2Yn0JD1j6KZBdwGotVzNexlmxT9MVbZBaHbVkSwDce4a8v17hK53I9PBwKZAq4xccdmpg7obj504YcTE0XE9pjZCB8M0WuUwvWLuUUfyMmBZA5RVPTi7AVQZDZD"
 
 function sendTextMessage(sender, text) {
 	let messageData = { text:text }
