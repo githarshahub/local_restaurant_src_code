@@ -32,7 +32,7 @@ app.get('/webhook/', function (req, res) {
 app.post('/webhook', function (req, res) {
     var events = req.body.entry[0].messaging;
 	console.log("Entered the post method");
-    for ((let i = 0; i < events.length; i++) {
+    for ((var i = 0; i < events.length; i++) {
         var event = events[i];
         if (event.message && event.message.text) {
             sendMessage(event.sender.id, {text: "Echo: " + event.message.text});
@@ -42,11 +42,14 @@ app.post('/webhook', function (req, res) {
 });
 
 
+
+
 // generic function sending messages
 function sendMessage(recipientId, message) {
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
-        qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
+        //qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
+		qs: {access_token:token,'action':action},
         method: 'POST',
         json: {
             recipient: {id: recipientId},
