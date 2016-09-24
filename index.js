@@ -121,7 +121,8 @@ request({url:'https://nodejsapitest1.herokuapp.com/listCoupons/:', qs:properties
 
 // recommended to inject access tokens as environmental variables, e.g.
 // const token = process.env.PAGE_ACCESS_TOKEN
-const token ="EAAZAGkDjeZAq8BACKGj94dCN1HNPFhiYlTcYTQceG6pfTbtFAk7IBhTDw8HUA6TlNbdObpr7thM239muUq4cbGVynsA35YkwGBxoLUfaZBt92JqCFN5eTybQHGZB5WEDYJZBO7vDgUOpRTYuMvReVAt5r8KeeXbaqF6ZBJbZAwIZBgZDZD"
+const token ="EAAZAGkDjeZAq8BANpv78zleVJYCWEvPy7X9qrqeqX723XUWNtIXuBzLXfd4AVGcNRBOAZBGXEjYYwYdNR6LaRDOAjyJ6FuQy1kjtpQGr4UpBOOZAd19OPZBhUZCafTkxipgtkEDkcbHc7qqnn3GfyEFbkLRGJv8QJtH2Mag4LTLwZDZD"
+
 
 function sendTextMessage(sender, text) {
 	let messageData = { text:text }
