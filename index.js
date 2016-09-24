@@ -38,7 +38,7 @@ app.post('/webhook/', function (req, res) {
 		if (event.message && event.message.text) {
 			let text = event.message.text
 			if (text === 'Generic') {
-				sendGenericMessageTest(sender)
+				sendTextMessage(sender, "HI There ", token)
 				continue
 			} else {				
 			sendTextMessageModified(sender,text)
