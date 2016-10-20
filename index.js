@@ -34,7 +34,7 @@ app.post('/webhook', function (req, res) {
     for (var i = 0; i < events.length; i++) {
         var event = events[i];
         if (event.message && event.message.text) {
-            sendMessage(event.sender.id, {text: "This is just the beginning. Watch out this space"});
+            sendMessage(event.sender.id, {text: "This is just the beginning. Watch out this spacesssss"});
         }
     }
     res.sendStatus(200);
